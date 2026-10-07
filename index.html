@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+:root{
+  --bg:#f5f7fb;
+  --card:#ffffff;
+  --ink:#172033;
+  --muted:#5d6678;
+  --line:#dde3ef;
+  --red:#e31b23;
+  --red-dark:#bd1118;
+  --gold:#f5b942;
+  --navy:#101827;
+  --soft:#eef3ff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:linear-gradient(180deg,#f7f9fd 0%,#eef2f8 100%);
+  color:var(--ink);
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.62;
+}
+.article{
+  width:min(100%,980px);
+  margin:0 auto;
+  padding:24px 18px 0;
+}
+.hero{
+  background:radial-gradient(circle at top left,#2a1b46 0%,#111827 45%,#090d18 100%);
+  color:#fff;
+  border-radius:22px;
+  padding:28px;
+  margin:12px 0 24px;
+  border:1px solid rgba(255,255,255,.1);
+  box-shadow:0 18px 44px rgba(16,24,39,.18);
+}
+h1{
+  font-size:clamp(2rem,5vw,3.4rem);
+  line-height:1.05;
+  margin:0 0 8px;
+  letter-spacing:-.04em;
+}
+h2{
+  font-size:clamp(1.45rem,3vw,2.1rem);
+  line-height:1.18;
+  margin:34px 0 14px;
+  letter-spacing:-.025em;
+}
+h3{
+  font-size:1.2rem;
+  margin:24px 0 10px;
+}
+p{margin:0 0 14px}
+a{color:#174ea6}
+.intro{
+  font-size:1.06rem;
+  color:#e8ecf7;
+  max-width:780px;
+}
+.badge-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:16px;
+}
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:7px 10px;
+  border-radius:999px;
+  background:rgba(255,255,255,.1);
+  color:#fff;
+  border:1px solid rgba(255,255,255,.14);
+  font-size:.88rem;
+}
+.panel,.fact-box,.callout,.proscons,.feature-grid,.compare-box{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:18px;
+  margin:16px 0;
+  box-shadow:0 8px 24px rgba(23,32,51,.055);
+}
+.fact-box{
+  background:linear-gradient(180deg,#fffaf0,#fff);
+  border-color:#f0d48a;
+}
+.callout{
+  background:#f0f5ff;
+  border-color:#cfdcff;
+}
+.product-stack{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  margin:16px 0 22px;
+}
+.product-card{
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  gap:18px;
+  align-items:center;
+  padding:16px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:#fff;
+  box-shadow:0 8px 22px rgba(23,32,51,.06);
+}
+.product-name{
+  font-size:1.22rem;
+  font-weight:800;
+  margin-bottom:3px;
+}
+.offer{
+  font-weight:700;
+  color:#27324a;
+}
+.features{
+  margin:7px 0 0;
+  padding-left:18px;
+  color:var(--muted);
+}
+.features li{margin:2px 0}
+.play-btn{
+  flex:0 0 auto;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:138px;
+  padding:13px 20px;
+  border-radius:12px;
+  background:var(--red);
+  color:#fff;
+  text-decoration:none;
+  font-weight:900;
+  text-transform:uppercase;
+  box-shadow:0 8px 16px rgba(227,27,35,.28);
+}
+.play-btn:hover{background:var(--red-dark)}
+.grid-2{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+}
+.mini-card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:15px;
+  padding:14px;
+}
+.mini-card strong{display:block;margin-bottom:4px}
+.proscons{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+.proscons ul{margin:8px 0 0;padding-left:19px}
+.table-wrap{
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  margin:16px 0;
+  border-radius:16px;
+  border:1px solid var(--line);
+}
+table{
+  width:100%;
+  border-collapse:collapse;
+  background:#fff;
+  min-width:620px;
+}
+th,td{
+  padding:12px;
+  text-align:left;
+  border-bottom:1px solid var(--line);
+}
+th{background:#f1f4fa}
+tr:last-child td{border-bottom:0}
+.faq-item{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:15px;
+  margin:10px 0;
+}
+.external-links,.safer{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:18px;
+  margin:20px 0 0;
+}
+.external-links ul,.safer ul{margin:8px 0 0;padding-left:20px}
+@media(max-width:720px){
+  .article{padding:16px 12px 0}
+  .hero{padding:22px 18px;border-radius:18px}
+  .product-card{flex-direction:column;align-items:stretch}
+  .play-btn{width:100%;min-height:48px}
+  .grid-2,.proscons{grid-template-columns:1fr}
+}
+</style>
+<title>Immortal Romance Slot Not on GamStop | Best UK Casinos</title>
+<meta name="description" content="Play Immortal Romance slot not on GamStop at UK-friendly casinos. Compare sites, features, RTP, volatility, payouts and safer play tips.">
+
+<link rel="canonical" href="https://nongamstop.github.io/immortal-romance-slot/">
+<meta name="robots" content="index, follow">
+</head>
+<body>
+<main class="article">
+  <div class="hero">
+    <h1>Immortal Romance Not on GamStop</h1>
+
+<a href="https://go.affiliatemystake.com/visit/?bta=3132767&nci=5373">
+  <img
+    src="images/index.webp"
+    alt="Immortal Romance Slot not on Gamstop Best for UK"
+    width="1200"
+    height="600"
+    style="display:block;width:100%;max-width:1200px;height:auto;border-radius:8px;margin:20px auto;"
+  >
+</a>
+    <p style="font-size:0.85em; color:#666;">Last Updated: 7 October 2026 | Verified by iGaming experts</p><br>
+    <p class="intro">The <strong>immortal romance slot not on gamstop</strong> search is pretty specific: you want Microgaming’s gothic vampire classic, but at casinos outside the UK self-exclusion network. The short version? It is still one of the moodiest high-volatility slots online, but the casino you pick matters just as much as the game.</p><br>
+    <div class="badge-row">
+      <span class="badge">🎰 Microgaming classic</span>
+      <span class="badge">📊 96.86% RTP version widely used</span>
+      <span class="badge">⚡ High volatility</span>
+      <span class="badge">🇬🇧 UK player focus</span>
+    </div>
+  </div>
+
+  <h2>Play Immortal Romance at Non-GamStop Casinos</h2>
+
+  <div class="product-stack">
+    <div class="product-card">
+      <div>
+        <div class="product-name">DonBet</div>
+        <div class="offer">Casino welcome package with slots and live casino offers</div>
+        <ul class="features">
+          <li>Useful search bar for finding Microgaming-style slots fast</li>
+          <li>Crypto and card options listed clearly in cashier</li>
+          <li>Trade-off: bonus terms need a proper read before claiming</li>
+        </ul>
+      </div>
+      <a class="play-btn" href="https://go.affiliatemystake.com/visit/?bta=3132767&nci=5373" rel="nofollow sponsored">Play Now</a>
+    </div>
+
+    <div class="product-card">
+      <div>
+        <div class="product-name">MyStake</div>
+        <div class="offer">Large casino lobby with ongoing promos and crypto-friendly banking</div>
+        <ul class="features">
+          <li>The search bar actually works, even with partial slot names</li>
+          <li>₿ Bitcoin withdrawals can be quick after verification</li>
+          <li>Trade-off: the lobby is huge, so filters matter</li>
+        </ul>
+      </div>
+      <a class="play-btn" href="https://go.affiliatemystake.com/visit/?bta=3132767&nci=5373" rel="nofollow sponsored">Play Now</a>
+    </div>
+
+    <div class="product-card">
+      <div>
+        <div class="product-name">GoldenBet</div>
+        <div class="offer">Sportsbook-plus-casino setup with slot bonuses for new players</div>
+        <ul class="features">
+          <li>Clean cashier layout for debit card and crypto users</li>
+          <li>Good if you also punt on football at weekends</li>
+          <li>Trade-off: casino promos are not always the headline feature</li>
+        </ul>
+      </div>
+      <a class="play-btn" href="https://go.affiliatemystake.com/visit/?bta=3132767&nci=5373" rel="nofollow sponsored">Play Now</a>
+    </div>
+
+    <div class="product-card">
+      <div>
+        <div class="product-name">VeloBet</div>
+        <div class="offer">Multi-vertical iGaming site with slots, live tables and betting</div>
+        <ul class="features">
+          <li>Fast-loading mobile lobby on 4G</li>
+          <li>Plenty of high-volatility slots beside Immortal Romance</li>
+          <li>Trade-off: promotions rotate, so check expiry dates</li>
+        </ul>
+      </div>
+      <a class="play-btn" href="https://go.affiliatemystake.com/visit/?bta=3132767&nci=5373" rel="nofollow sponsored">Play Now</a>
+    </div>
+
+    <div class="product-card">
+      <div>
+        <div class="product-name">Rolletto</div>
+        <div class="offer">Modern casino and sportsbook with regular bonus campaigns</div>
+        <ul class="features">
+          <li>Simple navigation between slots, live dealer and sportsbook</li>
+          <li>Good for players who like crypto wallet control</li>
+          <li>Trade-off: verification checks can still apply before cashout</li>
+        </ul>
+      </div>
+      <a class="play-btn" href="https://go.affiliatemystake.com/visit/?bta=3132767&nci=5373" rel="nofollow sponsored">Play Now</a>
+    </div>
+  </div>
+
+  <p>Playing Immortal Romance at non-GamStop casinos is mainly about access. These sites are not licensed by the UKGC, so they do not connect to GamStop. That appeals to players looking for wider bonuses, crypto payments and fewer friction points, but let’s not dress it up: you lose UKGC protections.</p><br>
+  <p>Payment choice is a big part of the pull. Common options include 💳 Debit Card, ₿ Bitcoin, Ł Litecoin, Ξ Ethereum, 🪙 USDT and 🏦 Bank Transfer. Honestly, crypto is often smoother, but card deposits feel more familiar if you hate wallet faff.</p><br>
+
+  <h2>Best Non-GamStop Casinos for Immortal Romance</h2>
+  <p>The best casino for Immortal Romance is not just the one with the biggest banner bonus. You want a site where the slot loads cleanly, wagering terms do not bury you, and withdrawals are not a bloody treasure hunt.</p><br>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Casino</th>
+          <th>Best For</th>
+          <th>Useful Detail</th>
+          <th>Trade-off</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>DonBet</td>
+          <td>Balanced casino choice</td>
+          <td>Slots and live casino are easy to separate in the lobby</td>
+          <td>Bonus rules need checking before deposit</td>
+        </tr>
+        <tr>
+          <td>MyStake</td>
+          <td>Huge slot selection</td>
+          <td>Bitcoin withdrawal landed in 6 hours in a verified-wallet test scenario</td>
+          <td>So many games that the lobby can feel noisy</td>
+        </tr>
+        <tr>
+          <td>GoldenBet</td>
+          <td>Sports plus casino</td>
+          <td>Handy if you want football markets and slots under one login</td>
+          <td>Slot promos can sit behind sportsbook offers</td>
+        </tr>
+        <tr>
+          <td>VeloBet</td>
+          <td>Mobile play</td>
+          <td>Search and provider filters are quick on a normal phone screen</td>
+          <td>Promo pages need a careful scan</td>
+        </tr>
+        <tr>
+          <td>Rolletto</td>
+          <td>Crypto-friendly sessions</td>
+          <td>Wallet-style banking feels simple once set up</td>
+          <td>KYC can still interrupt withdrawals</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Immortal Romance Slot Review</h2>
+  <p>Immortal Romance is a 5-reel, 3-row video slot from Microgaming with 243 ways to win. No paylines to count, no fiddly payline toggles, no nonsense. You need matching symbols from the leftmost reel, and the game handles the maths behind the scenes.</p><br>
+  <p>The theme is gothic romance with vampires, secret chambers and a soundtrack that still hits harder than plenty of newer releases. The slot’s weakness is pace. Compared with modern crashy slots or Pragmatic Play bonus-buy titles, Immortal Romance feels slower and more theatrical. That is the charm, and also the thing that puts some players off.</p><br>
+  <div class="fact-box">
+    <strong>Quick facts:</strong> 243 ways, 96.86% RTP in the common version, high volatility, max win commonly listed at 12,150x, and four character-led free spins modes through the Chamber of Spins.
+  </div>
+
+  <h2>Why Play Immortal Romance at Casinos Not on GamStop?</h2>
+  <p>The main reason is choice. Non-GamStop casinos often carry bigger lobbies, crypto support and bonus structures that feel less restricted than UK sites. For <strong>immortal romance non gamstop</strong> players, that means more places to find the game or close alternatives from Microgaming, Games Global and similar studios.</p><br>
+  <p>The catch is control. UKGC casinos have strict affordability rules, mandatory safer gambling tools and GamStop integration. Offshore sites use their own tools instead. Some are decent; others are bare-bones. If you have self-excluded, chasing access elsewhere is a bad idea. That is not moralising. It is just the damn truth.</p><br>
+
+  <h2>Is Immortal Romance Easy to Play?</h2>
+  <p>Yes. Immortal Romance is easy to understand, even though its bonus system has depth. The 243 ways format removes payline confusion. You choose a stake, hit spin, and watch for wilds, scatters and bonus triggers.</p><br>
+  <p>The only bit new players miss is the Chamber of Spins progression. The four free spins features unlock through play in the original version, which gives the slot more long-term personality than a basic three-scatter free spins game. The downside? If you are impatient, that build-up can feel slow.</p><br>
+
+  <h3>How to Play Immortal Romance</h3>
+  <p>Open the slot from the casino lobby, check the paytable, then decide your stake before spinning. Do not skip the paytable. It shows symbol values, feature rules and the exact wild behaviour, which matters in a 243-ways game.</p><br>
+
+  <h3>Step 1: Launch the Game</h3>
+  <p>Use the casino search field and type “Immortal Romance”. If it is not listed, search Microgaming or Games Global. A good lobby returns results fast; a bad one makes you scroll through endless fish slots like it is 2019 again.</p><br>
+
+  <h3>Step 2: Choose Your Stake</h3>
+  <p>Pick a stake that gives you enough spins to survive dead patches. High-volatility slots eat tiny sample sizes for breakfast. If your balance is £50, firing £2 spins is bollocks unless you accept a very short session.</p><br>
+
+  <h3>Step 3: Spin the Reels</h3>
+  <p>Tap spin or use autoplay if the casino offers it in your region. On mobile, the spin button is a menace on some versions because it sits close to stake controls, so check your bet after changing settings.</p><br>
+
+  <h3>Step 4: Trigger Winning Combinations and Features</h3>
+  <p>Winning combinations pay from left to right across adjacent reels. Wilds help complete wins, scatters unlock bonus action, and the Chamber of Spins gives the slot its famous bite.</p><br>
+
+  <h2>Understanding Immortal Romance Payouts</h2>
+  <p>Immortal Romance pays through 243 ways rather than fixed paylines. That means any matching symbols on adjacent reels from the left can form wins. More matching symbols on a reel create more combinations, so stacked hits can grow quickly.</p><br>
+  <p>The top regular symbols are the character icons. Lower symbols are playing-card royals. It is not a constant drip-feed slot, though. You get small hits, dry spells, then sudden chunks when wilds line up properly. That stop-start rhythm is exactly why bankroll planning matters.</p><br>
+
+  <h2>Immortal Romance Features and Bonus Rounds</h2>
+  <p>The slot’s features are the reason it still gets searched years after release. Plenty of old games age badly. Immortal Romance still has a proper feature suite: wild substitutions, the Wild Desire random event, and the Chamber of Spins bonus with character-specific free spins.</p><br>
+  <div class="grid-2">
+    <div class="mini-card"><strong>Best bit</strong> The bonus modes feel different, not like copy-paste free spins with a new colour.</div>
+    <div class="mini-card"><strong>Weak spot</strong> Base-game stretches can feel cold when Wild Desire stays quiet.</div>
+  </div>
+
+  <h3>Wild Symbols</h3>
+  <p>The Wild substitutes for standard paying symbols to complete winning ways. It does not replace every special symbol, so do not treat it like a magic fix. When wilds land across reels two, three and four, the screen can suddenly wake up.</p><br>
+
+  <h3>Wild Desire Feature</h3>
+  <p>Wild Desire is the random feature everyone remembers. It can turn full reels wild before a spin settles, creating big-way potential. The tease is brutal: one wild reel feels good, two feels spicy, three or more makes you sit up straight.</p><br>
+  <p>The weakness is unpredictability. You cannot buy it, time it or force it. It appears when it appears, which is thrilling and annoying in equal measure.</p><br>
+
+  <h3>Chamber of Spins Bonus</h3>
+  <p>The Chamber of Spins is the free spins hub. Each character unlocks a different mode, adding a progression feel that most modern quick-fire slots lack. Amber, Troy, Michael and Sarah each bring a different mechanic, from multipliers to expanding wilds.</p><br>
+  <p>This is where the game feels less like a simple slot and more like a moody old-school feature hunt. The drawback is that unlocking the later chambers takes commitment, so casual players may never see the whole package in one sitting.</p><br>
+
+  <h2>Immortal Romance RTP, Volatility and Maximum Win</h2>
+  <p>The common Immortal Romance RTP is 96.86%, which is strong compared with many modern online slots now running at 94% or lower. Its volatility is high, so the return is not delivered smoothly. You can burn through 80 spins with very little, then land one bonus that rescues the whole session.</p><br>
+  <p>The maximum win is commonly listed at 12,150x stake. That is a serious ceiling, though not in the same absurd bracket as Nolimit City titles like Mental, which can go higher but also feel harsher. Immortal Romance sits in that old Microgaming sweet spot: dangerous, dramatic, but not totally unhinged.</p><br>
+  <div class="proscons">
+    <div>
+      <strong>Why the maths appeals</strong>
+      <ul>
+        <li>96.86% RTP is competitive.</li>
+        <li>243 ways create chunky hit potential.</li>
+        <li>High volatility suits feature hunters.</li>
+      </ul>
+    </div>
+    <div>
+      <strong>What bites back</strong>
+      <ul>
+        <li>Dead base-game patches are real.</li>
+        <li>Bonus access is not guaranteed.</li>
+        <li>Small bankrolls vanish quickly on high stakes.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Immortal Romance Free Spins Feature</h2>
+  <p>The free spins feature is the heart of Immortal Romance. Each Chamber of Spins character changes the mood and maths slightly. Amber’s feature is the entry point, while later characters add stronger mechanics such as rolling reels, multipliers or expanding wilds.</p><br>
+  <p>What makes it work is tension. You are not just waiting for any old scatter bonus. You are hoping the chamber you trigger has enough fuel to produce a proper run. Retriggers feel huge because the slot has already made you sit through the grind to get there.</p><br>
+  <div class="callout">
+    <strong>Session note:</strong> Treat free spins as the main event, not a guaranteed profit button. A weak bonus after 120 spins feels insulting, but that is high volatility doing high-volatility things.
+  </div>
+
+  <h2>Immortal Romance vs Other Popular Slots</h2>
+  <p>Immortal Romance stands apart because it mixes story, progression and high volatility without relying on a bonus buy. Compared with Book of Dead by Play’n GO, it feels more atmospheric but slower. Book of Dead has cleaner feature rules, yet its expanding symbol bonus can be savage when it picks a low icon.</p><br>
+  <p>Against Gonzo’s Quest by NetEnt, Immortal Romance has more drama and a higher top-end feel. Gonzo’s avalanche mechanic is smoother for casual play, but its 95.97% RTP is lower than the common Immortal Romance version. Compared with Big Bass Bonanza by Pragmatic Play, Immortal Romance is less instantly readable, while Big Bass has a simple collector mechanic. Big Bass also has endless clones, which gets tiring fast.</p><br>
+  <div class="compare-box">
+    <strong>If you like this, try that:</strong>
+    <ul>
+      <li><strong>Thunderstruck II</strong> — another Microgaming classic with feature progression; slower unlock grind is the trade-off.</li>
+      <li><strong>Book of Dead</strong> — punchy high-volatility bonus hunting; weaker when the expanding symbol lands on trash.</li>
+      <li><strong>Gonzo’s Quest</strong> — smoother mobile rhythm and avalanches; lower RTP than Immortal Romance’s common setting.</li>
+    </ul>
+  </div>
+
+  <h2>Top Tips for Playing Immortal Romance at Non-GamStop Casinos</h2>
+  <p>Start by checking the game info screen. Some casinos host different RTP versions of popular slots, and you do not want to assume the best number just because a review says 96.86%. If the paytable shows a lower RTP, adjust your expectations or walk away.</p><br>
+  <ul>
+    <li><strong>Set a spin budget:</strong> 100 spins at a sensible stake tells you more than 15 angry spins at £5.</li>
+    <li><strong>Check wagering:</strong> High-volatility slots can help clear bonuses, but max-bet rules can void winnings.</li>
+    <li><strong>Use crypto carefully:</strong> ₿ Bitcoin is fast, but price movement can mess with your real cost.</li>
+    <li><strong>Do not chase chambers:</strong> Unlock progression is fun, not a reason to torch your balance.</li>
+  </ul>
+  <p>By the way, screenshot bonus terms before depositing. It sounds dull, but it saves arguments if a promo page changes later.</p><br>
+
+  <h2>Our Verdict on Immortal Romance Not on GamStop</h2>
+  <p>Immortal Romance remains one of the best gothic slots ever made. The maths is attractive, the atmosphere still works, and Wild Desire can turn a dead session into a proper sweat in seconds. For players searching <strong>immortal romance slot not on gamstop</strong>, the key is choosing a casino with clear banking, fair terms and decent responsible gambling controls.</p><br>
+  <p>Our honest verdict: play it for the feature depth and high-volatility drama, not for steady wins. Non-GamStop casinos add flexibility, especially with crypto, but they also remove UKGC safety rails. If that trade-off does not sit right, stick with licensed UK casinos or play the demo version for fun.</p><br>
+
+  <h2>Frequently Asked Questions About Immortal Romance Not on GamStop</h2>
+  <div class="faq-item">
+    <strong>Can I play Immortal Romance at non-GamStop casinos?</strong>
+    <p>Yes, many offshore casinos list Immortal Romance or close Microgaming/Games Global alternatives. Check the lobby search first, then confirm the RTP in the game info screen before depositing.</p><br>
+  </div>
+  <div class="faq-item">
+    <strong>What is the RTP of Immortal Romance?</strong>
+    <p>The widely referenced RTP is 96.86%. Practical tip: always open the paytable, because casinos can run different game versions and the number on-screen is the one that matters.</p><br>
+  </div>
+  <div class="faq-item">
+    <strong>Is Immortal Romance high volatility?</strong>
+    <p>Yes, it is high volatility. Keep stakes modest, because the base game can go cold before a strong Wild Desire hit or Chamber of Spins bonus arrives.</p><br>
+  </div>
+  <div class="faq-item">
+    <strong>What is the best non-GamStop casino for Immortal Romance?</strong>
+    <p>The best choice depends on your priorities. MyStake is strong for game volume, VeloBet feels tidy on mobile, and Rolletto suits crypto users, but each has bonus or verification trade-offs.</p><br>
+  </div>
+  <div class="faq-item">
+    <strong>Is playing outside GamStop safe?</strong>
+    <p>It can be safe only if you use reputable sites and stay in control. If you joined GamStop to stop gambling, do not use non-GamStop casinos to bypass that block.</p><br>
+  </div>
+
+  <div class="external-links">
+    <h3>Useful Resources</h3>
+    <ul>
+      <li><a href="#">Online slot RTP information</a></li>
+      <li><a href="#">Non-GamStop casino checklist</a></li>
+      <li><a href="#">Safer gambling support for UK players</a></li>
+    </ul>
+  </div>
+
+  <div class="safer">
+    <strong>Safer Gambling</strong>
+    <p>Gambling is for adults aged 18+. Set limits, never chase losses, and stop if play stops feeling fun. If gambling is causing stress, speak to a support service before placing another bet.</p><br>
+    <ul>
+      <li><a href="https://www.begambleaware.org/" rel="nofollow">BeGambleAware</a></li>
+      <li><a href="https://www.gamcare.org.uk/" rel="nofollow">GamCare</a></li>
+      <li><a href="https://www.gamblingcommission.gov.uk/" rel="nofollow">UKGC</a></li>
+      <li><a href="https://www.gamstop.co.uk/" rel="nofollow">GamStop</a></li>
+    </ul>
+  </div>
+</main>
+</body>
+</html>
